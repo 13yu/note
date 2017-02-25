@@ -1,0 +1,18 @@
+brew install polipo
+polipo socksParentProxy=localhost:1080
+
+.profile
+#proxy
+export http_proxy="http://127.0.0.1:8123/"
+export https_proxy="http://127.0.0.1:8123/"
+export ftp_proxy="http://127.0.0.1:8123/"
+export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+export HTTP_PROXY="http://127.0.0.1:8123/"
+export HTTPS_PROXY="http://127.0.0.1:8123/"
+export FTP_PROXY="http://127.0.0.1:8123/"
+export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
+polipo socksParentProxy=127.0.0.1:1080
+
+
+curl ip.gs
+http_proxy=http://localhost:8123 curl ip.gs
